@@ -1,0 +1,8 @@
+@import "../styles/variables";
+.container {
+    margin: 3rem auto;
+    max-width: 600px;
+    h1{
+        color: $primary;
+    }
+}

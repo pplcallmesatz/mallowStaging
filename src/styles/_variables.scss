@@ -1,0 +1,39 @@
+@import 'mixins/media-queries';
+
+// Color
+$primary: #005ef4;
+$text: #000000;
+$white: #ffffff;
+$d-bg: #0e1843;
+$f-c-o7: rgb(123,128,151);
+
+// Font Size
+$f-xs: 12px;
+$f-sm: 14px;
+$f-md: 16px;
+$f-lg: 18px;
+$f-xlg: 22px;
+$f-xxlg: 22px;
+$f-xxxlg: 26px;
+$f-xxxxlg: 40px;
+$f-mega: 48px;
+$f-xmega: 60px;
+$f-xxmega: 78px;
+
+//transparent border
+$trans-border: rgba(151,151,151,0.25);
+
+
+//Shadow
+$primary-shadow: 0 9px 15px 9px rgba(0, 94, 244, 0.15);
+
+
+//Section spacing
+%section{
+  @include media(lg){
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/media-queries';
+@import '../../styles/mixins/prefixer';
+.brand-logo{
+  max-height: 32px;
+}
+.navbar{
+  @include media(lg){
+    padding: 0px !important;
+  }
+  border-bottom: 1px solid rgba(151, 151, 151, .2);
+}
+.navbar-light {
+  .navbar-nav{
+    @include media(lg-max){
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  .nav-link {
+    position: relative;
+    &:not(.nav-btn) {
+      @include media(lg) {
+        padding: 1.56rem 1rem;
+        min-width: 104px;
+        text-align: center;
+      }
+      color: $text;
+
+      &.active {
+        color: $primary;
+        &:before {
+          width: 100%;
+        }
+      }
+      @include media(lg){
+        &:before{
+          background: $primary;
+          bottom: -1px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          content: "";
+          height: 5px;
+          position: absolute;left: 50%;
+          @include prefixer(transform, translateX(-50%));
+          width: 0;
+        }
+      }
+    }
+  }
+  }
+}
+.nav-btn{
+  align-self: flex-start;
+  @include media(lg){
+    align-self: center;
+  }
+  border-radius: 50px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: $white !important;
+  @include prefixer(transition, all linear 0.25s);
+  &:hover {
+    box-shadow: 0 9px 15px 9px rgba(0, 94, 244, 0.15);
+    -webkit-box-shadow: 0 9px 15px 9px rgba(0, 94, 244, 0.15);
+  }
+}

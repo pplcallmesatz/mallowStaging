@@ -1,0 +1,7 @@
+@import "variables";
+@import "mixins/prefixer";
+@import "mixins/button";
+.btn-primary{
+  @include btn($primary, $white);
+  font-size: $f-sm;
+}

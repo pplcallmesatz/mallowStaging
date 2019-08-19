@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/media-queries';
+@import '../../styles/mixins/prefixer';
+
+
+.why {
+ @extend %section;
+  [class*="col-"]:not(.col-lg-8){
+    margin-bottom: 20px;
+  }
+
+  .card{
+    border: none;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    min-height: 120px;
+    box-shadow: 0 16px 34px 10px rgba(0, 0, 0, 0.04);
+    -webkit-box-shadow: 0 16px 34px 10px rgba(0, 0, 0, 0.04);
+  }
+  .count{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 100%;
+    background-color: $primary;
+    color: $white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: $f-sm;
+    span{
+      display: inline-block;
+      position: relative;
+      font-weight: 600;
+      left: 10%;
+      opacity: 0.5;
+      @include prefixer(transform, translateX(-50%));
+    }
+  }
+  .content{
+    line-height: 1.75;
+    opacity: 0.8;
+  }
+}
+.split-title{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.why-mallow{
+  @extend %section;
+  color: $white;
+  background-image: radial-gradient(circle at 50% 0, #203578, #0e1843);
+  [class*="col-"]{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    @include media(lg){
+    &:nth-child(odd){
+      border-right: 1px solid $trans-border;
+      padding-right: 60px;
+    }
+    &:nth-child(even){
+      padding-left: 60px;
+    }
+    }
+  }
+  .title{
+    color: $white;
+    margin-bottom: 30px;
+    @include media(md){
+      margin-bottom: 60px;
+    }
+  }
+  .--content{
+   position: relative;
+    line-height: 1.75;
+    span{
+      position: absolute;
+      display: block;
+      line-height: 1;
+      font-size: 60px;
+      font-weight: 700;
+      opacity: 0.1;
+      top: 0px;
+      left: 0px;
+      @include prefixer(transform, translateY(-50%));
+    }
+  }
+
+}

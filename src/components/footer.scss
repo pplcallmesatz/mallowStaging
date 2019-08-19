@@ -1,0 +1,122 @@
+@import '../styles/variables';
+@import '../styles/mixins/media-queries';
+@import '../styles/mixins/prefixer';
+
+
+footer{
+  background-color: $d-bg;
+  color: $f-c-o7;
+  padding-top: 30px;
+  @include media(lg){
+    padding-top: 75px;
+  }
+  .brand-logo{
+    margin-bottom: 30px;
+  }
+  .fa-phone{
+    font-size: 22px;
+  }
+  .fa-mobile{
+    font-size: 25px;
+  }
+  p{
+    font-size: $f-sm;
+    font-weight: 400;
+    line-height: 32px;
+    font-color: $f-c-o7;
+    max-width: 275px;
+    letter-spacing: -0.39px;
+  }
+  ul{
+    list-style:none;
+    padding: 0px;
+    li{
+      a{
+        color: $f-c-o7;
+        &:hover{
+          color: lighten($f-c-o7, 20%);
+        }
+      }
+    }
+  }
+  .b-r{
+    @include media(lg) {
+      border-right: 1px solid rgba(151, 151, 151, 0.25);
+    }
+  }
+}
+.foo-title{
+  font-size: $f-md;
+  font-weight: 600;
+  color: $white;
+  margin-bottom: 15px;
+  ~ li {
+    a {
+      @include media(lg){
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      padding-top: 6px;
+      padding-bottom: 6px;
+      display: block;
+    }
+    i {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $f-c-o7;
+      text-align: center;
+      margin-right: 15px;
+      &:before{
+        line-height: 40px;
+      }
+    }
+  }
+}
+.social-icons{
+  margin-top: 60px;
+  ul {
+    li{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $f-c-o7;
+      text-align: center;
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+      a{
+        color: $white;
+        line-height: 40px;
+      }
+    }
+  }
+}
+.main-footer{
+  padding-bottom: 30px;
+  .row{
+    > div{
+        @include media(lg-max){
+          margin-bottom: 30px;
+        }
+    }
+  }
+}
+.featuredIn{
+  border-bottom: 1px solid rgba(151,151,151,0.25);
+  margin-bottom: 75px;
+}
+.sub-footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(151,151,151,0.25);
+  .f-s-b{
+    font-weight: 600;
+    font-size: $f-sm;
+    a{
+      color: $f-c-o7;
+    }
+  }
+}
