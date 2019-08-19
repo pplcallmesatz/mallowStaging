@@ -26,7 +26,7 @@ class Main extends React.Component{
 
             {/* Navigation Bar */}
             <header className={this.props.cardStyle}>
-                <Navbar />
+                <Navbar pagelocation={this.props.location}/>
             </header>
         {/* End: Navigation Bar */}
         {/* Body Content */}

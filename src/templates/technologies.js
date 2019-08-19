@@ -13,7 +13,7 @@ export default ({ data }) => {
   const dataloop = post.frontmatter.dataMD;
   return (
     <div>
-      <Main footer={post.frontmatter.title}>
+      <Main footer={post.frontmatter.title} location={post.fields.slug}>
         {/* Page Content */}
         <h1>{post.frontmatter.title}</h1>
         {nodes.map(({node} , i) => (
@@ -58,6 +58,9 @@ export const query = graphql`
   query($slug: String!) {
     one: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields{
+       slug
+      }
       frontmatter {
         title
         dataMD{

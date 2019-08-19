@@ -12,7 +12,7 @@ export default ({ data }) => {
 
   return (
     <div>
-      <Main footer={post.frontmatter.title}>
+      <Main footer={post.frontmatter.title} location={post.fields.slug}>
         {/* Page Content */}
         <Why content={post.frontmatter}/>
         <div  className={"myPOst"} dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -45,6 +45,9 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields{
+       slug
+      }
       frontmatter {
         title
         why

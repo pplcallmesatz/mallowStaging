@@ -38,7 +38,7 @@ export default class Main extends React.Component{
         })
     }
     render() {
-        const baseURL = window.location.pathname;
+        const baseURL = this.props.pagelocation;
         return (
           <Navbar  bg="white" fixed="top" expand="lg">
               <Container>
