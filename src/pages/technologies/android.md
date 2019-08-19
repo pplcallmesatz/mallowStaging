@@ -7,7 +7,8 @@ sImagesOne: "img/service-one.png"
 sImagesTwo: "img/service-one.png"
 imageCheck: true
 why:
-    - Ruby - Powerful object oriented programming language
+    - Ruby - Powerful object oriented programming language 
+    - Ruby - Powerful object oriented programming language 
     - Built in support for basic security features (Preventing XSS, CSRF, SQL Injections)
     - Suitable for developing production ready applications.
     - Wider community
