@@ -36,8 +36,22 @@ fields:
   - type: text
     name: title
     label: title
-  - type: text
-    name: sourceIcon
+  - name: sourceicon
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - imageOne
+      - imageTwo
+      - imageThree
+      - imageFour
+      - imageFive
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
     label: sourceIcon
   - type: textarea
     name: content
