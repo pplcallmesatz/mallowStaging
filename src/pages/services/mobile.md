@@ -5,7 +5,7 @@ shortDescription: 9 Years ago, we started our company only with native iOS app d
 template: servicesDetails
 images: "/img/mobile.png"
 imagesOne: "/static/mobile.png"
-imagesTwo: "/img/mobile.png"
+imagesTwo: "/static/badge.png"
 imagesThree: "/img/mobile.png"
 imagesFour: "/img/mobile.png"
 imagesFive: "/img/mobile.png"
@@ -21,7 +21,7 @@ dataMD:
   content: We develop native iOS applications for iPhone and iPad using Swift and
     Objective-C programming languages. We also develop applications for Apple Watch
     (Watch OS) and Apple TV (TvOS).
-  sourceicon: ''
+  sourceicon: imageTwo
 
 ---
 Pandas are really sweet.
