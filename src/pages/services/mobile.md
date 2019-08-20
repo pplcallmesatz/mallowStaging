@@ -15,11 +15,13 @@ dataMD:
   content: We develop native iOS applications for iPhone and iPad using Swift and
     Objective-C programming languages. We also develop applications for Apple Watch
     (Watch OS) and Apple TV (TvOS).
+  sourceicon: imageOne
 - title: iOS App Development
   sourceIcon: imagesTwo
   content: We develop native iOS applications for iPhone and iPad using Swift and
     Objective-C programming languages. We also develop applications for Apple Watch
     (Watch OS) and Apple TV (TvOS).
+  sourceicon: ''
 
 ---
 Pandas are really sweet.
