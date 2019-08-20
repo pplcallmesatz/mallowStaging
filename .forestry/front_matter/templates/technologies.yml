@@ -1,0 +1,31 @@
+---
+label: technologies
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: template
+  label: template
+- type: file
+  name: images
+  label: images
+- type: file
+  name: sImagesOne
+  label: sImagesOne
+- type: file
+  name: sImagesTwo
+  label: sImagesTwo
+- type: boolean
+  name: imageCheck
+  label: imageCheck
+- type: list
+  name: why
+  label: why
+- type: list
+  name: whyMallow
+  label: whyMallow
