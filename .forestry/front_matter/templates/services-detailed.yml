@@ -1,0 +1,44 @@
+---
+label: Services detailed
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: shortDescription
+  label: shortDescription
+- type: text
+  name: template
+  label: template
+- type: file
+  name: images
+  label: images
+- type: file
+  name: imagesOne
+  label: imagesOne
+- type: file
+  name: imagesTwo
+  label: imagesTwo
+- type: file
+  name: imagesThree
+  label: imagesThree
+- type: file
+  name: imagesFour
+  label: imagesFour
+- type: file
+  name: imagesFive
+  label: imagesFive
+- type: field_group_list
+  name: dataMD
+  label: dataMD
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: sourceIcon
+    label: sourceIcon
+  - type: textarea
+    name: content
+    label: content
