@@ -13,7 +13,7 @@ export default ({ data }) => {
     // Start: Iterating the applications card
     const cardData_One=post.frontmatter.application.map((data,i)=>{
         var imgData=data.sourceIcon;
-        const imgSrc = post.frontmatter[imgData].childImageSharp.fluid.src;
+        const imgSrc = post.frontmatter[imgData].childImageSharp.fixed.src;
         return (
             <React.Fragment key={i}>
                 <Col md={6} lg={4} >
