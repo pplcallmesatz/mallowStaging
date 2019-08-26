@@ -6,10 +6,14 @@ template: servicesDetails
 images: "/img/mobile.png"
 imagesOne: "/static/mobile.png"
 imagesTwo: "/static/badge.png"
-imagesThree: "/img/mobile.png"
+imagesThree: "/static/6stageuxprocess-810x810.png"
 imagesFour: "/img/mobile.png"
 imagesFive: "/img/mobile.png"
 dataMD:
+- title: Web
+  sourceicon: imageThree
+  content: We develop native Android applications for Android phone, Android tablet,
+    Android Watch, Android TV using Java and Kotlin programming languages.
 - title: Android
   sourceIcon: imagesOne
   content: We develop native iOS applications for iPhone and iPad using Swift and
