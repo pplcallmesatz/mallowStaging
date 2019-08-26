@@ -27,7 +27,7 @@ export default ({ data }) => {
     // Start: Iterating the Process card
     const cardData_Two=post.frontmatter.process.map((data,i)=>{
         var imgData=data.sourceIcon;
-        const imgSrc = post.frontmatter[imgData].childImageSharp.fluid.src;
+        const imgSrc = post.frontmatter[imgData].childImageSharp.fixed.src;
 
         return (
             <React.Fragment key={i}>
