@@ -93,42 +93,6 @@ export const query = graphql`
             }
           }
         }
-              imagesOne {
-          childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-              imagesTwo {
-          childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-              images {
-          childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-              images {
-          childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-              images {
-          childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        
       }
     }
   }

@@ -1,34 +1,49 @@
 import React from "react"
 import {graphql, Link} from "gatsby"
-import Layout from "../components/layout"
 import Main from "../components/main"
-import Container from "../components/container"
-import "../styles/styles.scss"
-import GatsbyImage from 'gatsby-image';
+import "../styles/technologies.scss"
+import Container from 'react-bootstrap/Container';
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import CardComponent from "../components/card/cardComponent";
+import Hero from "../components/hero/hero"
 
 export default ({ data }) => {
-  const post = data.one
-  const nodes = data.two.edges
-  const imageCheck = post.frontmatter.imageCheck;
-  const dataloop = post.frontmatter.dataMD;
+  const post = data.tech
+  const allTechnologies = data.techDetailed
+  const cardData=allTechnologies.edges.map((data,i)=>{
+    const cardImage = data.node.frontmatter.cardIcon.childImageSharp.fluid.src;
+    const cardTitle = data.node.frontmatter.title
+    const cardDescription = data.node.frontmatter.cardDescription;
+    const slug = data.node.fields.slug
+    const buttonName = "Know More"
+    return(
+      <React.Fragment key={i}>
+        <Col md={4} className="col-space" >
+          <Link to={slug} className={" "}>
+            <CardComponent image={cardImage} link={"true"} slug={slug} content={cardDescription} title={cardTitle} buttonName={"Know more"} cardStyle={"type-4"} />
+          </Link>
+          </Col>
+      </React.Fragment>
+    )
+  })
   return (
     <div>
       <Main footer={post.frontmatter.title} location={post.fields.slug}>
         {/* Page Content */}
-        <h1>{post.frontmatter.title}</h1>
-        {nodes.map(({node} , i) => (
-          <div key={i}>
-            <Link to={node.fields.slug} >
-              <h3 >
-                {node.frontmatter.title}{" "}
-                <span>
+        {/* Start: Hero Section */}
+        <Hero imageSource={post.frontmatter.heroImage.childImageSharp.fixed.src} title={post.frontmatter.title} description={post.frontmatter.description} />
+        {/* End: Hero Section */}
+        {/* Start: Technologies card data */}
+        <section>
+        <Container>
+        <Row className={""}>
+        {cardData}
+        </Row>
+      </Container>
+      </section>
+        {/* End: Technologies card data */}
 
-    </span>
-              </h3>
-            </Link>
-          </div>
-        ))}
-        <div  className={"myPOst"} dangerouslySetInnerHTML={{ __html: post.html }} />
         {/* End: Page Content */}
       </Main>
     </div>
@@ -56,25 +71,37 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    one: markdownRemark(fields: { slug: { eq: $slug } }) {
+    tech: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields{
        slug
       }
       frontmatter {
         title
-        dataMD{
-          sample
-          progress
+        description
+        heroImage{
+          childImageSharp {
+            fixed(width: 3000) {
+              src
+            }
+          }
         }
-        imageCheck
       }
     }
-    two:  allMarkdownRemark(filter: {fields: {slug: {regex: "/technologies/", ne: "/technologies/"}}}) {
+    techDetailed:  allMarkdownRemark(filter: {fields: {slug: {regex: "/technologies/", ne: "/technologies/"}}}) {
     edges {
       node {
         frontmatter {
           title
+          cardTitle
+          cardDescription
+          cardIcon{
+           childImageSharp {
+           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         fields {
           slug

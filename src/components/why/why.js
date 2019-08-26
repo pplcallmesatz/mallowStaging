@@ -4,7 +4,7 @@ import "../../styles/styles.scss";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import  "./why.scss"
+import  "./why.scss";
 import  WhyMallow from  "./why-mallow"
 // Common card element for iteration
 class IterateCard extends React.Component{

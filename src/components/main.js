@@ -3,6 +3,7 @@ import Navbar from './navbar/navbar';
 import { Helmet } from "react-helmet"
 import Footer from "../components/footer"
 import "../styles/title.scss"
+import "../styles/styles.scss"
 
 import { Link } from "gatsby"
 const ListLink = props => (
@@ -20,7 +21,7 @@ class Main extends React.Component{
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>My Title</title>
-                    <link rel="canonical" href="http://mysite.com/example" />
+                    <link rel="canonical" href="https://www.mallow-tech.com/" />
                     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
                 </Helmet>
 

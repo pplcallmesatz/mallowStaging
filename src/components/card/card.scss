@@ -1,0 +1,189 @@
+@import '../../styles/variables';
+@import "../../styles/mixins/media-queries";
+@import "../../styles/mixins/button";
+@import "../../styles/mixins/prefixer";
+
+.link-card {
+  display: block;
+}
+.col-space {
+  &.styled-icon {
+    [class*="col-"] {
+      @include media(md) {
+        margin-bottom: 100px;
+      }
+      margin-bottom: 80px;
+    }
+  }
+
+  [class*="col-"] {
+    margin-bottom: 30px;
+  }
+}
+
+.card {
+  text-align: center;
+  border: transparent solid 1px !important;
+  line-height: 2;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px 30px;
+  text-align: center;
+  .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: $f-xxlg;
+    margin: 20px 0px;
+  }
+
+  h6 {
+    font-weight: 600;
+    color: #005ef4;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0px !important;
+  }
+
+  &-content {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: $f-sm;
+    flex-grow: 1;
+  }
+}
+
+
+//Card Type one
+.type-1 {
+  &:hover {
+    box-shadow: 0 0 15px 9px rgba(0, 94, 244, 0.04);
+    -webkit-box-shadow: 0 0 15px 9px rgba(0, 94, 244, 0.04);
+  }
+
+  .icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//Card Type two
+.type-2 {
+  text-align: left !important;
+}
+
+//Card Type three
+.type-3 {
+  position: relative;
+  box-shadow: 0 0 15px 9px rgba(0, 94, 244, 0.04);
+  -webkit-box-shadow: 0 0 15px 9px rgba(0, 94, 244, 0.04);
+  padding-top: 70px;
+  @include media(md-max) {
+    margin-top: 50px;
+  }
+
+  .icon {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    @include prefixer(transform, translatex(-50%));
+  }
+
+  .card-body {
+    .card-title {
+      font-weight: bold;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  [class*="col-"]:nth-child(5n) & {
+    .styled-icon & {
+      .icon {
+        background: #41d27c;
+        -webkit-box-shadow: 1px 16px 34px 10px rgba(2, 223, 139, 0.28);
+        -moz-box-shadow: 1px 16px 34px 10px rgba(2, 223, 139, 0.28);
+        box-shadow: 1px 16px 34px 10px rgba(2, 223, 139, 0.28);
+      }
+    }
+  }
+
+  [class*="col-"]:nth-child(5n-1) & {
+    .styled-icon & {
+      .icon {
+        background: #2cbaef;
+        -webkit-box-shadow: 1px 16px 34px 10px rgba(44, 186, 239, 0.28);
+        -moz-box-shadow: 1px 16px 34px 10px rgba(44, 186, 239, 0.28);
+        box-shadow: 1px 16px 34px 10px rgba(44, 186, 239, 0.28);
+      }
+    }
+  }
+
+  [class*="col-"]:nth-child(5n-2) & {
+    .styled-icon & {
+      .icon {
+        background: #fd6d6d;
+        -webkit-box-shadow: 1px 16px 34px 10px rgba(253, 109, 109, 0.28);
+        -moz-box-shadow: 1px 16px 34px 10px rgba(253, 109, 109, 0.28);
+        box-shadow: 1px 16px 34px 10px rgba(253, 109, 109, 0.28);
+      }
+    }
+  }
+
+  [class*="col-"]:nth-child(5n-3) & {
+    .styled-icon & {
+      .icon {
+        background: #ffa200;
+        -webkit-box-shadow: 1px 16px 34px 10px rgba(255, 162, 0, 0.28);
+        -moz-box-shadow: 1px 16px 34px 10px rgba(255, 162, 0, 0.28);
+        box-shadow: 1px 16px 34px 10px rgba(255, 162, 0, 0.28);
+      }
+    }
+  }
+
+  [class*="col-"]:nth-child(5n-4) & {
+    .styled-icon & {
+      .icon {
+        background: #005ef4;
+        -webkit-box-shadow: 1px 16px 34px 10px rgba(0, 94, 244, 0.28);
+        moz-box-shadow: 1px 16px 34px 10px rgba(0, 94, 244, 0.28);
+        box-shadow: 1px 16px 34px 10px rgba(0, 94, 244, 0.28);
+      }
+    }
+  }
+}
+
+
+//Card Type four
+.type-4{
+  .icon{
+    width: 175px;
+    height: 175px;
+    background-color: $white;
+    box-shadow:  16px 34px 10px rgba(0, 0, 0, 0.04);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .link-button{
+    display: inline-block;
+    padding: 8px 30px;
+    margin-top: 20px;
+    border-radius: 100px;
+    @include btn($primary, $white);
+  }
+}

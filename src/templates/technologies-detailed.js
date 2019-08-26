@@ -1,8 +1,10 @@
 import React from "react"
 import {graphql, Link} from "gatsby"
 import Main from "../components/main"
+import "../styles/technologies.scss"
 import Why from "../components/why/why"
-import WhyMallow from "../components/why/why-mallow"
+import Hero from "../components/hero/hero"
+
 
 
 export default ({ data }) => {
@@ -14,6 +16,9 @@ export default ({ data }) => {
     <div>
       <Main footer={post.frontmatter.title} location={post.fields.slug}>
         {/* Page Content */}
+        {/* Start: Hero Secrion */}
+        <Hero imageSource={post.frontmatter.heroImage.childImageSharp.fixed.src} title={post.frontmatter.title} description={post.frontmatter.description} />
+        {/* End: Hero Secrion */}
         <Why content={post.frontmatter}/>
         <div  className={"myPOst"} dangerouslySetInnerHTML={{ __html: post.html }} />
         {/* End: Page Content */}
@@ -50,9 +55,16 @@ export const query = graphql`
       }
       frontmatter {
         title
+        description
         why
+        heroImage{
+        childImageSharp {
+          fixed(width: 3000) {
+            src
+          }
+        }
+        }
         whyMallow
-        imageCheck
       }
     }
   }

@@ -31,9 +31,9 @@ $primary-shadow: 0 9px 15px 9px rgba(0, 94, 244, 0.15);
 //Section spacing
 %section{
   @include media(lg){
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }

@@ -4,7 +4,6 @@
 
 
 .why {
- @extend %section;
   [class*="col-"]:not(.col-lg-8){
     margin-bottom: 20px;
   }
@@ -19,10 +18,12 @@
     align-items: center;
     flex-direction: row;
     height: 100%;
+    text-align: left;
     min-height: 120px;
     box-shadow: 0 16px 34px 10px rgba(0, 0, 0, 0.04);
     -webkit-box-shadow: 0 16px 34px 10px rgba(0, 0, 0, 0.04);
   }
+
   .count{
     position: absolute;
     top: 0px;
@@ -55,7 +56,6 @@
   align-items: center;
 }
 .why-mallow{
-  @extend %section;
   color: $white;
   background-image: radial-gradient(circle at 50% 0, #203578, #0e1843);
   [class*="col-"]{

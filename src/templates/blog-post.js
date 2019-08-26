@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import GatsbyImage from 'gatsby-image'
 import Main from "../components/main"
-import Layout from "../components/layout"
 
 export default ({ data }) => {
     const post = data.markdownRemark
@@ -14,7 +12,7 @@ export default ({ data }) => {
     <div>
         <Main>
             <h1>{post.frontmatter.title}</h1>
-            {imageCheck ?( <img src={post.frontmatter.images.childImageSharp.fluid.base64} />):('')}
+            {imageCheck ?( <img src={post.frontmatter.images.childImageSharp.fluid.base64} alt={"alt text"} />):('')}
             <div dangerouslySetInnerHTML={{__html: post.frontmatter.codeTm}}></div>
             <div className={"myPOst"} dangerouslySetInnerHTML={{ __html: post.html }} />
             <div className={"Dasam"}>

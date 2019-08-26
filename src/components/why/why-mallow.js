@@ -1,5 +1,4 @@
 import React from "react";
-import  {Card}  from 'react-bootstrap';
 import "../../styles/styles.scss";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';

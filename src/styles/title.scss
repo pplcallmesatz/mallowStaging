@@ -14,9 +14,6 @@
 .lg-split-title{
   font-size: $f-xxxlg;
   max-width: 75%;
-  @include media(md-max) {
-    margin-bottom: 30px;
-  }
   @include media(md) {
     font-size: $f-mega;
   }

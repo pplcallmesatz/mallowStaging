@@ -22,7 +22,8 @@ export default class Main extends React.Component{
         this.toggle = this.toggle.bind(this);
         this.state = {
             isOpen: false,
-            tech: false
+            tech: false,
+            services: false
         };
     }
     toggle() {
@@ -32,9 +33,9 @@ export default class Main extends React.Component{
     }
     componentDidMount() {
         const winURL = window.location.pathname;
-        winURL.includes("technologies")
         this.setState({
-            tech: winURL.includes("technologies")
+            tech: winURL.includes("technologies"),
+            services: winURL.includes("services")
         })
     }
     render() {
@@ -49,8 +50,8 @@ export default class Main extends React.Component{
                       <Nav className="ml-auto">
                           <ListLink className={"nav-link"} to="/">Home</ListLink>
                           {/*<ListLink className={"nav-link"}  to="/about/">About</ListLink>*/}
-                          <ListLink className={"nav-link"}  to="/services/">Services</ListLink>
-                          <ListLink className={"nav-link"}  to="/portfolio/">Portfolio</ListLink>
+                          <ListLink className={this.state.services?"nav-link active":"nav-link"}   to="/services/">Services</ListLink>
+                          <ListLink className={"nav-link"} to="/portfolio/">Portfolio</ListLink>
                           <ListLink className={this.state.tech?"nav-link active":"nav-link"}  to="/technologies/">Technologies</ListLink>
                           <ListLink className={"nav-link"}  to="/career/">Career</ListLink>
                           {/*<ListLink className={"nav-link"}  to="/blog/">Blog</ListLink>*/}
