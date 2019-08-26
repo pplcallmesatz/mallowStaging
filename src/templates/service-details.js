@@ -95,142 +95,142 @@ export const query = graphql`
          }   
           applicationIconOne {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+          fixed {
+                src
+              }
           }
         }
           applicationIconTwo {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+        fixed {
+                src
+              }
           }
         }
           applicationIconThree {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
           applicationIconFour {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
           applicationIconFive {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          applicationIconSix {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          applicationIconSeven {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          applicationIconEight {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          applicationIconNine {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+          fixed {
+                src
+              }
           }
         }
          applicationIconTen {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+          fixed {
+                src
+              }
           }
         }
          processIconOne {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconTwo {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconThree {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconFour {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconFive {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconSix {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconSeven {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+          fixed {
+                src
+              }
           }
         }
          processIconEight {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconNine {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
          processIconTen {
           childImageSharp {
-           fluid(toFormatBase64: PNG, fit: CONTAIN, base64Width: 1000) {
-                ...GatsbyImageSharpFluid
-            }
+           fixed {
+                src
+              }
           }
         }
         application {
