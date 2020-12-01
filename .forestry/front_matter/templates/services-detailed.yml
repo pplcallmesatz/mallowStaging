@@ -56,5 +56,3 @@ fields:
   - type: textarea
     name: content
     label: content
-pages:
-- src/pages/services/mobile.md
